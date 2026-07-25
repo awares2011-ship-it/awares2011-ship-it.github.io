@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Wonders — Word Puzzle Game</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Segoe UI', system-ui, -apple-system, sans-serif; color:#fff; min-height:100vh;
+    background:linear-gradient(135deg,#1a2a6c,#b21f1f,#fdbb2d,#1a2a6c); background-size:400% 400%;
+    animation:bg 14s ease infinite; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 22px; }
+  @keyframes bg { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+  .logo { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; margin-bottom:22px; }
+  .logo span { width:50px; height:58px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+    font-size:36px; font-weight:900; box-shadow:0 8px 20px rgba(0,0,0,.35), inset 0 -4px 0 rgba(0,0,0,.18); }
+  h1 { font-size:22px; letter-spacing:5px; font-weight:700; opacity:.92; margin-bottom:14px; }
+  p { max-width:520px; line-height:1.7; opacity:.9; margin-bottom:26px; }
+  a.btn { display:inline-block; background:rgba(255,255,255,.16); color:#fff; text-decoration:none; font-weight:700;
+    padding:13px 32px; border-radius:30px; box-shadow:inset 0 0 0 2px rgba(255,255,255,.45); margin:6px; transition:transform .12s; }
+  a.btn:hover { transform:scale(1.05); }
+  footer { margin-top:36px; font-size:13px; opacity:.7; }
+</style>
+</head>
+<body>
+  <div class="logo" id="logo"></div>
+  <h1>A WORLD OF WORDS</h1>
+  <p>Word Wonders is a relaxing word-puzzle game. Swipe letters to build words, fill the crossword grid, and travel to 30 beautiful destinations around the globe.</p>
+  <a class="btn" href="privacy-policy.html">Privacy Policy</a>
+  <a class="btn" href="mailto:awarenivrutti2011@gmail.com">Contact Support</a>
+  <footer>© 2026 Nivrutti Aware — Word Wonders</footer>
+<script>
+  const colors = ['#ff6b81','#ffa552','#ffd766','#74e39a','#4ecdc4','#a29bfe','#f77fbe','#5aa7f0','#ff8a5c','#7fe28f','#c79bff'];
+  const holder = document.getElementById('logo');
+  'WORD WONDERS'.split('').forEach((ch, i) => {
+    if (ch === ' ') { const s = document.createElement('div'); s.style.width = '14px'; holder.appendChild(s); return; }
+    const d = document.createElement('span');
+    d.textContent = ch; d.style.background = colors[i % colors.length];
+    holder.appendChild(d);
+  });
+</script>
+</body>
+</html>
