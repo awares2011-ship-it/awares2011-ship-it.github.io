@@ -1,3 +1,4 @@
 google.com, pub-1607968585289432, DIRECT, f08c47fec0942fa0
 pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
 openx.com, 615916474, DIRECT, 6a698e2ec38604c6
+facebook.com, 378172752037674, DIRECT, c3e20eee3f780d68
